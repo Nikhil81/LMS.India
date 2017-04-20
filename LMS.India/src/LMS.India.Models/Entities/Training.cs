@@ -8,8 +8,8 @@ namespace LMS.India.Models.Entities
     public class Training
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Training_Id { get; set; }
+       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int TrainingId { get; set; }
         public string CourseTitle { get; set; }
         public LearningType LearningType { get; set; }
 
@@ -18,7 +18,7 @@ namespace LMS.India.Models.Entities
         public int NoOfSessions { get; set; }
 
         public Locations Locations { get; set; }
-
+       
         public ICollection<Sessions> Sessions { get; set; }
 
 

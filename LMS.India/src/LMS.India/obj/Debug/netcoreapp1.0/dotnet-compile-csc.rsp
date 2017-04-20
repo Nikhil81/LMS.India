@@ -183,5 +183,6 @@
 -resource:"C:\Nikhil\LMS.India\LMS.India\src\LMS.India\obj\Debug\netcoreapp1.0\LMS.Indiadotnet-compile.deps.json",LMS.India.deps.json
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India\Program.cs"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India\Startup.cs"
+"C:\Nikhil\LMS.India\LMS.India\src\LMS.India\Controllers\FeedBackController.cs"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India\Controllers\TrainingController.cs"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India\Controllers\ValuesController.cs"

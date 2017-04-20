@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LMS.India.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,11 +13,12 @@ namespace LMS.India.Models.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Feedback_Id { get; set; }
-        public ICollection<Questions> Questions { get; set; }
+        public ICollection<Questions> QuestionAndRating { get; set; }
 
         public string Remark { get; set; }
-        public Trainees AttendeeId { get; set; }
-        public Sessions SessionId { get; set; }
+        public int AttendeeId { get; set; }
+        public int SessionId { get; set; }
+        
         public DateTime FeedbackDate { get; set; }
     }
 }

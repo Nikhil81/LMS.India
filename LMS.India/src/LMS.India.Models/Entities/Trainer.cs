@@ -11,9 +11,11 @@ namespace LMS.India.Models.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Trainer_Id { get; set; }
+        public int TrainerId { get; set; }
         public string Name { get; set; }
         [EmailAddress]
         public string Email { get; set; }
+      
+
     }
 }

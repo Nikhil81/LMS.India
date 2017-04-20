@@ -12,10 +12,10 @@ namespace LMS.India.Models.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Trainees_Id { get; set; }
+        public int TraineesId { get; set; }
 
-        public string Name { get; set; }
-        [EmailAddress]
+        //public string Name { get; set; }
+        
         public string Emails { get; set; }
 
     }

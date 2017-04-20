@@ -15,6 +15,6 @@ namespace LMS.India.Repository
         ILMSRepository<Trainees> TraineesRepository { get; }
         ILMSRepository<Trainer> TrainerRepository { get; }
         ILMSRepository<Training> TrainingRepository { get; }
-        void Save();
+       
     }
 }

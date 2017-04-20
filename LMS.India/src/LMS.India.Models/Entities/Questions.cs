@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LMS.India.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,8 @@ namespace LMS.India.Models.Entities
         public int Questions_Id { get; set; }
         public string Question { get; set; }
         public int Rating { get; set; }
+        public LearningObjectiveAndFacilitator LearningObjectiveAndFacilitator { get; set; }
+       
 
     }
 }

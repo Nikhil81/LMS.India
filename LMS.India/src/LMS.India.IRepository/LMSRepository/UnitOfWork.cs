@@ -95,9 +95,6 @@ namespace LMS.India.Repository
             }
         }
 
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
+       
     }
 }

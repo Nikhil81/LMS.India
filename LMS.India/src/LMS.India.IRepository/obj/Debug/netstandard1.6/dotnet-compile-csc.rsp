@@ -79,6 +79,7 @@
 -r:"C:\Users\nikhil.kumar2\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"C:\Nikhil\LMS.India\LMS.India\src\LMS.India.Models\bin\Debug\netstandard1.6\LMS.India.Models.dll"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India.IRepository\EntityDBContext.cs"
+"C:\Nikhil\LMS.India\LMS.India\src\LMS.India.IRepository\DbInitializer\DbInitializer_SeedData.cs"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India.IRepository\ILMSRepository\ILMSRepository.cs"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India.IRepository\ILMSRepository\IUnitOfWork.cs"
 "C:\Nikhil\LMS.India\LMS.India\src\LMS.India.IRepository\LMSRepository\GenericRepository.cs"

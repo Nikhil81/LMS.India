@@ -11,21 +11,30 @@ namespace LMS.India.Repository
     public class GenericRepository<T> :
     ILMSRepository<T> where T : class
     {
-        public DbContext _context;
-        public DbSet<T> _dbset;
-        public GenericRepository(DbContext context)
+        public EntityDBContext _context;
+        private DbSet<T> _dbset;
+        
+        public GenericRepository(EntityDBContext context)
         {
             this._context = context;
-            _dbset = context.Set<T>();
+            this._dbset = context.Set<T>(); //GetDbSet(context);
         }
+
+        //private DbSet<T> GetDbSet(EntityDBContext context)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public void Add(T item)
         {
             //_con
+            this._dbset.Add(item);
+            Save();
         }
 
         public T Find(long key)
         {
-            throw new NotImplementedException();
+           return  this._dbset.Find(key);
         }
 
         public IQueryable<T> FindBy(Expression<Func<T, bool>> predicate)
@@ -33,12 +42,29 @@ namespace LMS.India.Repository
             throw new NotImplementedException();
         }
 
-        public IQueryable<T> GetAll()
+        public IQueryable<T> GetAll(params Expression<Func<T, object>>[] includes)
         {
-            throw new NotImplementedException();
+            IQueryable<T> _dbQuery = this._dbset;
+            foreach (Expression<Func<T, object>> include in includes)
+                _dbQuery = _dbQuery.Include(include);
+            return _dbQuery;
         }
 
-        public void Remove(long key)
+        //get multiple childs
+
+        public IQueryable<T> GetAll(params string[] includeProperties)
+        {
+            IQueryable<T> _dbQuery = this._dbset;
+            foreach (var includeProperty in includeProperties)
+            {
+                _dbQuery = _dbQuery.Include(includeProperty);
+            }
+            return _dbQuery;
+        }
+
+        
+
+    public void Remove(long key)
         {
             // context.Entry(entity).State = EntityState.Deleted;
         }
@@ -46,6 +72,10 @@ namespace LMS.India.Repository
         public void Update(T item)
         {
             //context.Entry(item).State = EntityState.Modified;
+        }
+        private void Save()
+        {
+            _context.SaveChanges();
         }
     }
 }
