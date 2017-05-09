@@ -19,7 +19,7 @@
     "LMS.India": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:5000/api/values",
+      "launchUrl": "http://172.16.34.174:8080/api/Training/GetAllTrainings",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

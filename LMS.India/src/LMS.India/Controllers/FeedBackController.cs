@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LMS.India.Repository;
 using LMS.India.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LMS.India.Controllers
 {
     [Route("api/FeedBack/[action]")]
+    //[Authorize(Policy = "AuthorizeUser")]
     public class FeedBackController : Controller
     {
         private readonly IUnitOfWork _iUnitOfWork;

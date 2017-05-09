@@ -14,6 +14,7 @@ namespace LMS.India
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("http://172.16.34.174:8080")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

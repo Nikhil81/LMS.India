@@ -14,7 +14,8 @@ namespace LMS.India.Repository
         private ILMSRepository<Trainees> _traineesRepository;
         private ILMSRepository<Trainer> _trainerRepository;
         private ILMSRepository<Training> _trainingRepository;
-
+        private ILMSRepository<Users> _usersRepository;
+        
         private EntityDBContext _context;
 
         public UnitOfWork(EntityDBContext context)
@@ -95,6 +96,17 @@ namespace LMS.India.Repository
             }
         }
 
-       
+        public ILMSRepository<Users> UsersRepository
+        {
+            get
+            {
+
+                if (_usersRepository == null)
+                {
+                    _usersRepository = new GenericRepository<Users>(_context);
+                }
+                return _usersRepository;
+            }
+        }
     }
 }

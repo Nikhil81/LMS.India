@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using LMS.India.Repository;
 using LMS.India.Models.Entities;
 using System.Linq.Expressions;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LMS.India.Controllers
 {
     [Route("api/Training/[action]")]
+    //[Authorize(Policy = "AuthorizeUser")]
     public class TrainingController : Controller
     {
         private readonly IUnitOfWork _iUnitOfWork;
@@ -38,11 +40,47 @@ namespace LMS.India.Controllers
             return _iUnitOfWork.TrainingRepository.Find(id);
         }
 
-        //GET api/Training/GetAllTrainingsByDate/10/10/2017,11/10/2017
-        [HttpGet("{Fromdate}/{Todate}", Name = "GetAllTrainingsByDate")]
-        public string GetAllTrainingsByDate(DateTime Fromdate, DateTime Todate)
+        // GET api/Training/GetTrainingsByEmail/nikhil.kumar2@globallogic.com
+        [HttpGet("{email}", Name = "GetTrainingsByEmail")]
+        public IEnumerable<Training> GetTrainingsByEmail(string email)
         {
-           return "value 2";
+            List<Training> _traingings = new List<Training>();
+            var _alltraingings = _iUnitOfWork.TrainingRepository.GetAll("Sessions", "Sessions.Audiences", "Sessions.Trainer");
+            foreach (var _eachTrainging in _alltraingings)
+            {
+                var _selectedtraingings = _eachTrainging.Sessions.SelectMany(x => x.Audiences).Where(x => x.Emails == email);
+                if (_selectedtraingings.Any())
+                {
+                    _traingings.Add(_eachTrainging);
+
+                }
+
+            }
+            return _traingings;
+
+        }
+
+        //GET api/Training/GetAllTrainingsByDate/nikhil.kumar2@globallogic.com/10/10/2017,11/10/2017
+        [HttpGet("{email}/{Fromdate}/{Todate}", Name = "GetAllSessionByDate")]
+        public IEnumerable<Sessions> GetAllSessionByDate(string email, DateTime Fromdate, DateTime Todate)
+        {
+            //todo refactor
+            List<Sessions> _sessions = new List<Sessions>();
+            var _allTraining = _iUnitOfWork.TrainingRepository.GetAll("Sessions", "Sessions.Audiences", "Sessions.Trainer");
+            foreach (var _traingings in _allTraining)
+            {
+                var _selectedSessions = _traingings.Sessions.Where(x => (x.Sessiondate >= Fromdate && x.Sessiondate <= Todate));
+                if (_selectedSessions.Any() && _selectedSessions.SelectMany(x =>x.Audiences.Where(y => y.Emails == email)).Any())
+                {
+                    //TODO : return selected sessions
+                   // _sessions.Add(_selectedSessions);
+
+                }
+
+            }
+            return _sessions;
+
+
         }
 
         //GET api/Training/GetAllEnrolledTrainingsByUserId/10

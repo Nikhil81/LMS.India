@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.6/",
-    "signature": "d5541430f904ff8bf439389c123bb520ac1ddfce"
+    "signature": "1e4176b0570ab064c23f01ccd544c80c914c6047"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,12 +9,38 @@
     ".NETStandard,Version=v1.6/": {
       "LMS.India.IRepository/1.0.0": {
         "dependencies": {
+          "AutoMapper": "6.0.2",
           "LMS.India.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
           "NETStandard.Library": "1.6.0"
         },
         "runtime": {
           "LMS.India.IRepository.dll": {}
+        }
+      },
+      "AutoMapper/6.0.2": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -357,6 +383,33 @@
           "lib/netstandard1.0/System.Collections.Immutable.dll": {}
         }
       },
+      "System.Collections.NonGeneric/4.3.0": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
+        }
+      },
+      "System.Collections.Specialized/4.3.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Globalization.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
+        }
+      },
       "System.ComponentModel/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -381,6 +434,38 @@
         },
         "runtime": {
           "lib/netstandard1.4/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.ComponentModel.Primitives/4.3.0": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
       "System.Console/4.0.0": {
@@ -1256,6 +1341,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uI4uPyibgP4+2zn21fVqy0ep+eYeB5IcfjanyUESj+F0qcrOYpAW4iH2+xKET0vfhgJn4U1c4xN3stKUhygTmQ=="
+    },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1471,6 +1561,16 @@
       "serviceable": true,
       "sha512": "sha512-9Z25H6Hnw8Uy8IRFb+c6Sy6oi/ZS20akbKG8uxkpxSs6pT4++fPFlRbKsIegKysAl9ooIPnwCHnAu9gChQibAw=="
     },
+    "System.Collections.NonGeneric/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fgPNGVt5BriYx/Of97JvhQgtI6p2mRLCGz+KCc/tuU8qL4ghXwUdp8Sadc/zGLxqSe6h4olnbyAfOVnaYQbk8A=="
+    },
+    "System.Collections.Specialized/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9qIrfLxpNn2bbHmzYe0Qp86PwTIGhCs/UyGYxHhrHlJD6TeSy4cks0IqNCanTNxmAet7GEiLC0qN2NZSEhJuyw=="
+    },
     "System.ComponentModel/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1480,6 +1580,16 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Mo7zin6dmPPreebFCE+Ld8mWDXLc2vIfR55trz/VdBDbokXHgveVJBFSiIIEjDS31iXmthAWCRNPMdRVlsNmlQ=="
+    },
+    "System.ComponentModel.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W2aK6S+sXeYWWAdw6eYQdpaUZHY82pIR29QF4jvBPrmvtkHie6mHlHHkFgQCijlKaBZ0+CdrDz1ULKHOtJdLsA=="
+    },
+    "System.ComponentModel.TypeConverter/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jmimRXGFeYjJdWDMweqG/NTnhkuYXHNPJBFHDlnGI09sZIMHdTkEQhBDRbIDHMJcggFTnsiHRKNvbtIhXxo/cw=="
     },
     "System.Console/4.0.0": {
       "type": "package",

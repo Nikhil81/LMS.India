@@ -2,6 +2,7 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "AutoMapper": "6.0.2",
     "LMS.India.Models": "1.0.0-*",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
     "NETStandard.Library": "1.6.0"

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C0EC48C-BAB6-46EB-BA86-45168B2BF49D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89BE1A88-BB19-4D68-A834-ECC357FF2B4F}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApiProject", "src\WebApiProject\WebApiProject.xproj", "{1E885C86-9E76-4444-90F3-FCD4FB54B017}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DataModel", "src\DataModel\DataModel.xproj", "{0A07DB40-4939-4696-843A-2BE01069BE92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E885C86-9E76-4444-90F3-FCD4FB54B017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E885C86-9E76-4444-90F3-FCD4FB54B017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E885C86-9E76-4444-90F3-FCD4FB54B017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E885C86-9E76-4444-90F3-FCD4FB54B017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A07DB40-4939-4696-843A-2BE01069BE92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A07DB40-4939-4696-843A-2BE01069BE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A07DB40-4939-4696-843A-2BE01069BE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A07DB40-4939-4696-843A-2BE01069BE92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E885C86-9E76-4444-90F3-FCD4FB54B017} = {6C0EC48C-BAB6-46EB-BA86-45168B2BF49D}
+		{0A07DB40-4939-4696-843A-2BE01069BE92} = {6C0EC48C-BAB6-46EB-BA86-45168B2BF49D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://saranshkaroliwal.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = src\\DataModel\\DataModel.xproj
+		SccProjectTopLevelParentUniqueName1 = WebApiProject.sln
+		SccProjectName1 = src/DataModel
+		SccLocalPath1 = src\\DataModel
+		SccProjectUniqueName2 = src\\WebApiProject\\WebApiProject.xproj
+		SccProjectTopLevelParentUniqueName2 = WebApiProject.sln
+		SccProjectName2 = src/WebApiProject
+		SccLocalPath2 = src\\WebApiProject
+	EndGlobalSection
+EndGlobal
